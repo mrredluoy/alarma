@@ -1,0 +1,360 @@
+
+@font-face{
+    font-family:'digital-clock-font';
+    src: url('img/DS-DIGIB.TTF');
+   }
+   
+
+*{
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+    font-family: 'Roboto Mono', monospace;
+}
+body{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    border-radius: 0px;
+    background: #092833;
+    box-shadow: inset -16px -16px 100px #092832,
+                inset 16px 16px 100px #092834;
+   
+}
+ 
+    
+
+#hora{
+    display: block;
+    width: 100%;
+    height:100% ;
+    font-size: 20px; 
+    display: flex;
+    justify-content:center;
+    align-items: center;    
+}
+
+#hora p{
+    font-family:-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    letter-spacing: 1px;
+    color: rgba(4, 247, 247, 0.233) ;
+    margin-left: 10px;
+  
+}
+
+.contenedor{
+    width: 80vw;
+    height: 90vh;
+    display: flex;
+    justify-content: center;    
+    /*border: 1px solid red;*/
+
+}
+
+.contenAlarma{
+    width:50%;
+    height:100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+   /* border: 1px solid green;*/
+}
+
+.alarma{
+    width: 70%;
+    height: 80%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    
+  /*  border: 2px solid red;*/
+
+}
+h1{
+    color: rgb(255, 255, 255);
+    width:50% ;
+    text-align: center;
+    
+}
+.asunto{
+    display: block;
+    width: 80%;
+    height:10% ;
+    margin-bottom: 40px;
+    color: rgb(255, 255, 255);
+    font-size:20px ;
+    text-align: center;
+    border-style: none;  
+    background:transparent;
+    border-bottom:1px solid rgb(4, 247, 247) ;
+   
+}
+
+.cambiadoresTop{
+    width: 100%;
+    height: 10%;
+    display: flex;
+    justify-content:space-around;
+    align-items: flex-end;
+   /* background: chartreuse;*/
+}
+.cambiadoresTop span,.cambiadoresBotom  span{
+    display: block;
+    width:35px ;
+    height: 35px;
+  /*  background-color: crimson;    */
+}
+
+.cambiadoresTop span,.cambiadoresBotom  span,.btn span{
+cursor: pointer;
+
+}   
+.cambiadoresTop span{
+background-image: url(img/angle-up-solid.svg);
+background-position: center;
+background-size: cover;
+
+
+}
+.cambiadoresBotom  span{
+    background-image: url(img/angle-down-solid.svg);
+background-position: center;
+background-size: cover;
+}
+.cuadros{
+    width: 100%;
+    height: 25%;
+  /*  background-color: cyan;*/
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+.cuadros div{
+    width:100px ;
+    height: 100px;   
+    display: flex;
+    justify-content: center;
+    align-items: center;
+   /* border:1px solid  #00e6e6; 
+    border-radius: 20px;*/
+    
+}
+.cuadros div .span{
+    display: block;
+    width: 80%;
+    height: 80%;
+    text-align: center;
+    font-size: 60px;
+    color: rgb(255, 255, 255);
+    font-family:'digital-clock-font';
+    animation:transparente 1s linear infinite  ;
+   /* border: 1px solid red;*/
+}
+
+
+@keyframes transparente{
+    0%{  opacity: 1;  }
+    50%{opacity: 0;}
+    100%{opacity: 1;}
+}
+
+.cambiadoresBotom{
+    width: 100%;
+    height: 10%;
+    display: flex;
+    justify-content:space-around;
+    align-items: flex-start;
+   /* background: chartreuse;*/
+
+}
+.musica{
+    margin-top:40px ;
+    width: 100%;
+    height:10% ;
+    display: flex;
+  /* background-color: violet;*/
+    display: flex;
+    justify-content:center;
+    align-items: center;
+}
+.musica .tono{
+    padding-top: 2px;
+ display: block;
+ width: 70%;
+ height:40px ; 
+ font-size: 25px;
+ letter-spacing: 5px;
+ text-align: center;
+ color: rgb(255, 255, 255);
+ border: 1px solid rgb(4, 247, 247)  ;
+ border-radius: 15px;
+
+ 
+}
+
+.musica .btn{
+  width: 10%;
+  height: 50px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: center;
+  /*border: 1px solid;*/
+}
+.btn .btns {
+    display: block;
+    width: 20px;
+    height: 20px;
+   
+   /* background-color: crimson;*/
+}
+.btn .top{
+    background-image: url(img/angle-up-solid.svg);
+background-position: center;
+background-size: cover;
+}
+.btn .botom{
+    background-image: url(img/angle-down-solid.svg);
+background-position: center;
+background-size: cover;
+}
+
+
+
+.historial{  
+    width: 50%;
+    height:100%;
+   /* border: 1px solid black;*/
+   /* overflow-y:scroll;*/
+    position:relative ;
+}
+
+
+.historial div {
+    width: 98.5%;
+    height: 30px;
+    display: flex;
+    margin-top:15px ;
+    justify-content:space-around;
+    align-items: center;
+   /* border-bottom: 1px solid rgb(255, 255, 255);*/
+   font-size:  20px;
+    text-align: center;
+
+}
+#nada{
+    width: 100%;
+    height: 50px;
+}
+.historial .titulo{
+    width: 38%;
+    height: 50px;
+    display: flex;
+    justify-content:space-around;
+    align-items: center;
+   /*border: 1px solid red;*/
+   font-size:  20px;
+    text-align: center;
+    position: relative;
+    position: fixed;
+    /*border-radius: 32px;
+background: #c0c0c0;
+box-shadow: inset -25px 25px 50px #8c8c8c,
+            inset 25px -25px 50px #f4f4f4;*/
+}
+
+.titulo span{
+    display:block ;    
+    height:100% ;
+    width:120px ;
+    padding-top: 18px;
+    text-align: center;
+    color: rgba(255, 255, 255, 0.575);
+ 
+  
+       
+}
+
+
+.titulo .shora ,.sactividad,.restante,.smelodia{
+   border-bottom: 2PX solid rgb(0, 217, 255);
+}
+
+.card{
+    border-radius: 10px;
+border: 1px solid rgb(5, 252, 252);
+padding: 5px;
+
+}
+
+.card p,.a{
+    display:block ;
+   /* padding-top:3px ;*/
+    width:150px ;
+    height:100% ;   
+    text-align: center; 
+    display: flex;
+    justify-content: center;
+   align-items: center;  
+    color: rgb(4, 247, 247);
+    font-family:'digital-clock-font';
+    
+}
+
+
+
+.imgalarma{
+    width: 20px;
+    height: 20px;
+    margin-right:5px ;
+    filter: invert(48%) sepia(89%) saturate(1476%) hue-rotate(86deg) brightness(9000%) contrast(1000%);
+}
+#melodia2 ,#melodia1{
+    font-family: 'Roboto Mono', monospace;
+    
+  
+}
+.botones{
+    width: 100%;
+    height: 5%;
+    display: flex;
+    justify-content: space-evenly;
+}
+.butom{
+    cursor: pointer;
+    border-style: none;
+    display: block;
+    width:20% ;
+    height: 100%;
+    border-radius: 30px;
+    color: turquoise;
+background: #092833;
+box-shadow:  5px 5px 10px #05161c,
+             -5px -5px 10px #0d3a4a;
+   
+}
+
+.butom:hover{
+    color: black;
+    border-radius: 30px;
+background: linear-gradient(145deg, #00e6e6, #00ffff);
+box-shadow:  5px 5px 10px #008c8c,
+             -5px -5px 10px #00ffff;
+}
+
+#tuturial{
+
+ width: 100%;
+ height:auto;
+ display: flex;
+ justify-content:center;
+ align-items: center;
+ flex-direction: column;
+ text-align: start; 
+ font-size: 18px;
+ color: #74ebeb86;
+
+}

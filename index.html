@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto+Mono:wght@300&display=swap" rel="stylesheet"> 
+    <link rel="stylesheet" href="estilo.css">
+    
+    <title>Alarma</title>
+</head>
+<body>
+    <audio id='musica' src="img/alarma.mp3"></audio>
+    <div class="horaa" id="hora"></div>
+   <div class="contenedor">
+       <div class="contenAlarma">
+           <h1>Mr.Schedule</h1>
+           <div class="alarma">
+               <input id="asunto" class="asunto" type="text" placeholder=" Escriba Asunto">
+              
+               <div class="cambiadoresTop">
+                   <span class="btnTOP"></span>
+                    <span class="btnTOP"></span>
+                     <span class="btnTOP"></span>
+               </div>
+               <div class="cuadros">
+                   <div class="hora"><span  class="span">1</span> </div>
+                   <p class="puntos">:</p>
+                   <div class="minuto "><span  class="span">00</span></div>
+                   <p class="puntos">:</p>
+                   <div class="pmam"><span  class="span">pm</span ></div>
+               </div>
+               <div class="cambiadoresBotom">
+                   <span class="btnBOTOM"></span>
+                   <span class="btnBOTOM">▼</span>
+                <span class="btnBOTOM"></span>
+           </div>
+            <div class="musica">
+                <span id="tono" class="tono">Motivador</span>
+                <div class="btn">
+                    <span class="top btns"></span>
+                    <span class="botom btns"></span>
+                </div>
+            </div>
+    
+           </div> 
+           <div class="botones">
+                <button class="butom" id="btnAgregar">Agregar </button>
+           <button class="butom" id="btnEmpezar">Empezar </button>
+           </div>      
+          
+        </div>
+        <div id="historial" class="historial">
+                     
+            <div class="titulo">
+                 <span class="shora animacion">Hora</span>
+                 <span class="sactividad animacion">Actividad</span>
+                 <span class="restante animacion" >T.Restante</span>
+                 <span  class="smelodia animacion"> Melodia </span>
+            </div>
+            <div id="nada"></div> 
+            <div id="tuturial">
+                <h3>Antes de Empezar</h3>
+                <p> Este app es  <b>Beta</b> , que te ayuda  a ordenar y recordar tus tareas  diarias , esta dedicado para  las personas que estan a diario al frente de un ordenador.</p>
+                <h3>Como funciona?</h3>
+                <p>Es muy sencillo utlizar  a continuacion te damos las indicaciones,sin embargo es muy importante aclarar  que este app funciona con internet y solo cuando la pagina esta <b>abierta </b>,tambien  solo funciona  en el dia actual ,eso quiere decir que no puedes progrmar para las fechas siguientes.
+                     </p> <br><br>
+                     <h2>Indicaciones:</h2>
+                   <ul>
+                       <li> En el campo de <b>asunto</b> escriba una palabra corta una  <b>clave</b>  relacionado a la tarea.</li>                     
+                       <li>Escoja la hora <b> hora</b> .</li>
+                       <li>Escoja una <b>melodia</b> .</li>
+                       <li>Haga click en <b>agregar</b> .</li>
+                       <li>Luego haga click en <b> empezar</b>  y listo .</li>
+                   </ul>
+               
+                
+            </div>
+       </div>
+
+   </div> 
+
+   
+   
+ <script src="app.js"></script>
+</body>
+</html>
