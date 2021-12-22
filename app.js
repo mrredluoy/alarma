@@ -8,22 +8,17 @@ const btnEmpezar = document.getElementById('btnEmpezar')
 const displayHistorial=document.getElementById('historial')
 const asunto=document.getElementById('asunto')
 const musica=document.getElementById('musica')
+const musica1=document.getElementById('musica1')
 const horP=document.getElementById('hora')
 const body=document.querySelector('body')
 const tuturial=document.getElementById('tuturial')
 
 
 asunto.value='';
-
-
-
-
 let [btnTHora,btnTMinuto,btnTAP]=btnTops;
 let [btnBHora,btnBMinuto,btnBAP]=btnButoms;
 let[btnTop,btnButom]=btn;
 const[hora,minutos,amPM]=cuadros
-
-
 let horaDisplay=0;
 let minutoDisplay=0;
 let amPm='pm'
@@ -33,7 +28,6 @@ let numero=0
 
   
 setInterval(()=>{
-
  +function(){  
         let fecha= new Date(),
              year=fecha.getFullYear(),
@@ -139,14 +133,20 @@ class alarma {
     
     if((h==this.hora)&&(minutes==this.minutos)&&(pm==this.td)){
         verificador=true
-        musica.currentTime=0
-        return  musica.play();
+        if (this.musica=='Motivador') {
+             musica.currentTime=0
+            return  musica.play();
+       
+        }else{
+            musica.pause();
+            musica1.currentTime=0
+            return  musica1.play();
         }
         
     }
+ }
+
 }
-
-
 
 btnTHora.addEventListener('click',e=>{     
    if (horaDisplay>=12) {
@@ -194,8 +194,7 @@ btnTop.addEventListener('click',e=>{
    melodia.textContent=tono;
 
 })
-btnButom.addEventListener('click',e=>{
-    console.log('abajo')
+btnButom.addEventListener('click',e=>{    
     tono='Estricto'
     melodia.textContent=tono; 
  });
@@ -209,21 +208,14 @@ btnAgregar.addEventListener('click',e=>{
  const alarma1= new alarma(asunto.value,hora.textContent,minutos.textContent,amPM.textContent,melodia.textContent)  
  displayHistorial.innerHTML+= alarma1.pintar();
  asunto.value=''; 
-  let interval=setInterval(()=>{  
-   
-     alarma1.pAlarma();
-   
-
+  let interval=setInterval(()=>{     
+     alarma1.pAlarma();  
      if (verificador==true) {
          clearInterval(interval)
          verificador=false;
      }
       
  },1000)
-
-
-
- 
  
 });
 

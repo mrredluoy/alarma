@@ -237,7 +237,7 @@ background-size: cover;
     width: 98.5%;
     height: 30px;
     display: flex;
-    margin-top:15px ;
+ 
     justify-content:space-around;
     align-items: center;
    /* border-bottom: 1px solid rgb(255, 255, 255);*/
@@ -250,7 +250,7 @@ background-size: cover;
     height: 50px;
 }
 .historial .titulo{
-    width: 38%;
+    /* width: 38%; */
     height: 50px;
     display: flex;
     justify-content:space-around;
@@ -259,7 +259,7 @@ background-size: cover;
    font-size:  20px;
     text-align: center;
     position: relative;
-    position: fixed;
+  
     /*border-radius: 32px;
 background: #c0c0c0;
 box-shadow: inset -25px 25px 50px #8c8c8c,
@@ -269,7 +269,7 @@ box-shadow: inset -25px 25px 50px #8c8c8c,
 .titulo span{
     display:block ;    
     height:100% ;
-    width:120px ;
+    font-size: 2.5vh;
     padding-top: 18px;
     text-align: center;
     color: rgba(255, 255, 255, 0.575);
@@ -301,6 +301,7 @@ padding: 5px;
    align-items: center;  
     color: rgb(4, 247, 247);
     font-family:'digital-clock-font';
+    font-size: 3vh;
     
 }
 
@@ -354,7 +355,117 @@ box-shadow:  5px 5px 10px #008c8c,
  align-items: center;
  flex-direction: column;
  text-align: start; 
- font-size: 18px;
+ font-size: 2vh;
  color: #74ebeb86;
 
+}
+
+@media screen  and (max-width:1250px){
+    .contenedor{
+        height: 160vh;
+       flex-direction: column;
+       align-items: center;
+        /* background-color: rgb(63, 44, 170); */
+    }
+  
+  .contenAlarma {
+  width: 70%;
+  height:50%;
+  }
+  .historial{
+      width: 90%;
+      padding: 10px;
+  }
+  .musica {
+      width: 150%;
+   justify-content: space-evenly;
+   margin-bottom: 10%;
+  }
+  .musica .tono{
+      font-size: 2.5vh;
+     
+  }
+  .asunto{
+      width: 150%;
+      font-size: 2.5vh;
+  }
+  .butom{
+      width: 35%;
+  }
+  #hora{
+      margin-top: 1%;
+      font-size: 2vh;
+  }
+  h1{
+      width: 100%;
+  }
+  .cambiadoresBotom,.cambiadoresTop,.cuadros{
+  
+      width: 100%;
+  }
+  }
+
+
+@media screen  and (max-width:600px){
+  .contenedor{
+      height: 160vh;
+     flex-direction: column;
+     align-items: center;
+      /* background-color: rgb(63, 44, 170); */
+  }
+
+.contenAlarma {
+width: 70%;
+height:50%;
+}
+.historial{
+    width: 120%;
+    padding: 10px;
+    display: flex;  
+    flex-direction: column; 
+    
+}
+.musica {
+    width: 200%;
+ justify-content: space-evenly;
+ margin-bottom: 10%;
+}
+.musica .tono{
+    font-size: 2.5vh;
+   
+}
+.asunto{
+    width: 150%;
+    font-size: 2.5vh;
+}
+.butom{
+    width: 35%;
+}
+#hora{
+    margin-top: 3%;
+    font-size: 3.5vw;
+}
+h1{
+    width: 100%;
+}
+.cambiadoresBotom,.cambiadoresTop,.cuadros{
+
+    width: 200%;
+}
+.historial div{
+    width: 100%;
+}
+#melodia2,#melon{
+    display: none;
+}
+.a{
+    width: 70%;
+}
+p{
+    display: block;
+    width: 70%;
+}
+.cuadros div .span{
+    font-size: 10vh;
+}
 }
